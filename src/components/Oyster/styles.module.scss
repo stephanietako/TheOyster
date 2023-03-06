@@ -33,6 +33,8 @@
     background-clip: content-box;
     filter: brightness(0) invert(1);
     border: 2px solid #fff;
+    -webkit-filter: brightness(0) invert(1);
+    border: 2px solid #fff;
   }
 
   .oyster2 {
