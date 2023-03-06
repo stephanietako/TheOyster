@@ -1,0 +1,71 @@
+// .App {
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.oyster_image_container {
+  position: relative;
+  width: 475px;
+  height: 265px;
+  top: 0;
+  left: 0;
+  margin: -10px;
+  animation-duration: 1s;
+  animation-name: apparition;
+  background-size: cover;
+  animation-duration: 1.5s;
+  display: block;
+
+  .oyster1 {
+    margin: 0;
+    position: absolute;
+    width: 41%;
+    height: 100%;
+    background-size: cover;
+    perspective-origin: center;
+    animation-name: move;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    background-clip: content-box;
+    filter: brightness(0) invert(1);
+    border: 2px solid #fff;
+  }
+
+  .oyster2 {
+    position: absolute;
+    width: 39%;
+    height: 100%;
+    background-size: cover;
+    perspective-origin: center;
+    animation-name: move;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    background-clip: content-box;
+    &.grayscale {
+      filter: invert(13%) sepia(8%) saturate(5%) hue-rotate(64deg)
+        brightness(95%) contrast(98%);
+      -webkit-filter: invert(13%) sepia(8%) saturate(5%) hue-rotate(64deg)
+        brightness(95%) contrast(98%);
+    }
+  }
+  @keyframes apparition {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate3d(0, -4px, 0);
+    }
+  }
+}
