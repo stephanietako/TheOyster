@@ -1,3 +1,5 @@
+@import "../../style/font.scss";
+
 .sections {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,8 @@
 }
 p {
   color: #fff;
-  font-size: 55px;
+  font-size: 5rem;
+  white-space: pre-wrap;
 }
 .button {
   background-color: #fff;
@@ -21,4 +24,56 @@ p {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+.bold {
+  font-family: "EB Garamond", serif;
+  font-weight: bold;
+}
+
+.italic {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+}
+
+.underline {
+  font-family: monospace;
+}
+
+.italic {
+  font-family: serif;
+}
+
+.boldy {
+  font-family: "Arimo", sans-serif;
+}
+
+.content1 p {
+  font-size: 9rem;
+}
+
+.content2 p {
+  text-align-last: center;
+}
+
+.left_content1 p {
+  text-align-last: left;
+}
+
+.left_content1 p {
+  text-align-last: left;
+  font-size: 9rem;
+}
+
+.title p {
+  text-align: left;
+}
+
+.box {
+  color: white;
+  font-size: 22px;
+}
+
+.list p {
+  font-size: 5rem;
 }

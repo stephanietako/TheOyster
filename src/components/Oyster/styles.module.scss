@@ -1,5 +1,6 @@
 .oyster_image_container {
   position: fixed;
+  z-index: -1;
   background-color: transparent;
   min-width: 100%;
   min-height: 100%;
@@ -14,24 +15,26 @@
   justify-content: center;
   align-items: center;
   border: 3px solid yellow;
+  &::after {
+    filter: blur(50px);
+  }
   .oyster1 {
-    width: 280px;
-    height: 300px;
+    z-index: -0.2;
+    // width: 325px;
+    // height: 335px;
+    width: 25rem;
+    height: 35rem;
     left: 0;
     filter: brightness(0) invert(1);
     -webkit-filter: brightness(0) invert(1);
   }
   .oyster2 {
-    width: 278px;
-    height: 298px;
+    z-index: -0.2;
+    // width: 328px;
+    // height: 348px;
+    width: 25.5rem;
+    height: 35.5rem;
     right: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 121, 0, 0.5) 0%,
-      rgba(250, 0, 255, 0.5) 54%,
-      rgba(126, 0, 255, 0.5) 100%
-    );
-
     background: -moz-linear-gradient(top, transparent, black);
     background: -webkit-gradient(
       linear,
