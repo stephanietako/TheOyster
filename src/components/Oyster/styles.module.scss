@@ -15,25 +15,18 @@
   justify-content: center;
   align-items: center;
   border: 3px solid yellow;
-  &::after {
-    filter: blur(50px);
-  }
   .oyster1 {
     z-index: -0.2;
-    // width: 325px;
-    // height: 335px;
-    width: 25rem;
-    height: 35rem;
+    width: 19rem;
+    height: 20rem;
     left: 0;
-    filter: brightness(0) invert(1);
-    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1) blur(50px);
+    -webkit-filter: brightness(0) invert(1) blur(3px);
   }
   .oyster2 {
     z-index: -0.2;
-    // width: 328px;
-    // height: 348px;
-    width: 25.5rem;
-    height: 35.5rem;
+    width: 18.7rem;
+    height: 19.5rem;
     right: 0;
     background: -moz-linear-gradient(top, transparent, black);
     background: -webkit-gradient(
@@ -48,9 +41,14 @@
     -webkit-text-fill-color: transparent; /*full support except IE, not on standard track */
     &.grayscale {
       filter: invert(13%) sepia(8%) saturate(22%) hue-rotate(-0.25turn)
-        brightness(72%) contrast(98%);
+        brightness(85%) contrast(98%);
       -webkit-filter: invert(13%) sepia(8%) saturate(22%) hue-rotate(-0.25turn)
-        brightness(72%) contrast(98%);
+        brightness(85%) contrast(98%);
+    }
+    &::after {
+      border: 20px solid green;
+      border-image-source: linear-gradient(lightgreen, darkgreen);
+      border-image-slice: 20;
     }
   }
 

@@ -72,9 +72,6 @@ const Oyster = () => {
           style={oysterStyles}
           ref={oystImg}
         />
-        {/* <div className={styles.oyster_animation} ref={oystImg}>
-          <img src={oyster} alt="oyster animation" />
-        </div> */}
       </div>
     </div>
   );
