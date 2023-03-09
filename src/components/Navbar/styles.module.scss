@@ -4,24 +4,22 @@
   justify-content: flex-end;
   align-items: center;
   padding: 20px 50px;
-  border: 2px solid yellow;
   .__logo {
     margin-right: auto;
-    min-width: 17%;
+    min-width: 27%;
     height: auto;
     justify-content: flex-start;
     display: flex;
     position: relative;
     cursor: pointer;
-    border: 4px solid red;
     object-fit: cover;
   }
   .__left {
     width: 20%;
-    border: 3px solid pink;
     align-items: center;
     justify-content: center;
-    padding-top: 12px;
+    font-size: 33px;
+    margin: auto;
     color: #fff;
   }
   li {
@@ -38,6 +36,6 @@
   }
 
   a:hover {
-    color: #b2dfdb;
+    color: grey;
   }
 }

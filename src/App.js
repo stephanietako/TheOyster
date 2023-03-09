@@ -7,7 +7,6 @@ import Oyster from "./components/Oyster";
 const App = () => {
   return (
     <div className="App">
-      {/* <Oyster /> */}
       <Router>
         <Routes>
           <Route

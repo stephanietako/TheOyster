@@ -10,7 +10,7 @@ const HomePage = () => {
   const lists = [
     "art direction",
     "brand positionning ",
-    " brand & identitydesign ",
+    "brand & identitydesign ",
     "creative direction ",
     "motion",
     "prototyping",
@@ -29,7 +29,7 @@ const HomePage = () => {
             <div className={styles.__content1_top}>
               <h1 className={styles.font_italic}>
                 <span className={styles.italic}> Let's build </span>
-                <span className={styles.boldy}>
+                <span className={styles.arimo}>
                   {" "}
                   the next <br /> big thing
                 </span>
@@ -47,15 +47,14 @@ const HomePage = () => {
         </section>
 
         <section>
-          <div className={styles.mindset}>
+          <div className={styles.mindset1}>
             <div className={styles.__box1}>
-              <div className={styles.__box_right}>
+              <div className={styles.__box_left}>
                 <h2>
-                  WE ARE <br /> CREATIVE <br />
-                  MINDS
+                  we are <br /> creative <br /> minds
                 </h2>
               </div>
-              <div className={styles.__box_left}>
+              <div className={styles.__box_right}>
                 <p>
                   We craft products and brands that <br />
                   stands out. Together let's make
@@ -65,14 +64,18 @@ const HomePage = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+        <section>
+          <div className={styles.mindset2}>
             <div className={styles.__box2}>
-              <div className={styles.__box_right}>
+              <div className={styles.__box_left}>
                 <h2>
-                  DRIVEN BY <br />
-                  RESULTS
+                  driven by <br />
+                  results
                 </h2>
               </div>
-              <div className={styles.__box_left}>
+              <div className={styles.__box_right}>
                 <p>
                   We believe that function is <br />
                   stands out. Together let's makethe substance of aesthetic
@@ -118,7 +121,7 @@ const HomePage = () => {
         <section>
           <div className={styles.services}>
             <div className={styles.__title}>
-              <h2>SERVICES</h2>
+              <h2>Services</h2>
             </div>
             <p>{listItems}</p>
           </div>
