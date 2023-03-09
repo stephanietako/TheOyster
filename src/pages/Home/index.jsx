@@ -16,15 +16,16 @@ const HomePage = () => {
     "prototyping",
     "product strategy ",
     "testing & reserch ",
-    " UX/UI design",
+    "UX/UI design",
     " we love creazy ideas",
   ];
   const listItems = lists.map((list) => <li key={list}>{list}</li>);
   return (
     <>
       <Navbar />
-      <div className={styles.main_content}>
-        <section>
+
+      <section>
+        <div className={styles.sections}>
           <div className={styles.top}>
             <div className={styles.__content1_top}>
               <h1 className={styles.font_italic}>
@@ -38,15 +39,16 @@ const HomePage = () => {
             </div>
             <div className={styles.__content2}>
               <p>
-                You bring the vision, we help you <br />
-                turn it into a brand/product <br />
+                You bring the vision, we help you turn it into a brand / product
                 people love.
               </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section>
+      <section>
+        <div className={styles.sections}>
           <div className={styles.mindset1}>
             <div className={styles.__box1}>
               <div className={styles.__box_left}>
@@ -56,17 +58,17 @@ const HomePage = () => {
               </div>
               <div className={styles.__box_right}>
                 <p>
-                  We craft products and brands that <br />
-                  stands out. Together let's make
-                  <br />
-                  things smarter, newer, and more
-                  <br /> memorable.
+                  We craft products and brands that stands out. Together let's
+                  make things smarter, newer, and more memorable.
                 </p>
               </div>
             </div>
           </div>
-        </section>
-        <section>
+        </div>
+      </section>
+
+      <section>
+        <div className={styles.sections}>
           <div className={styles.mindset2}>
             <div className={styles.__box2}>
               <div className={styles.__box_left}>
@@ -77,20 +79,18 @@ const HomePage = () => {
               </div>
               <div className={styles.__box_right}>
                 <p>
-                  We believe that function is <br />
-                  stands out. Together let's makethe substance of aesthetic
-                  experience.
-                  <br />
-                  This principle guides clearer user <br />
-                  interfaces, stronger branding devices <br />
-                  and more cohesive design systems.
+                  We believe that function is the substance of aesthetic
+                  experience. This principle guides clearer user interfaces,
+                  stronger branding devices and more cohesive design systems.
                 </p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section>
+      <section>
+        <div className={styles.sections}>
           <div className={styles.form}>
             <div className={styles.left_form}>
               <p>Let's you stand out</p>
@@ -102,9 +102,11 @@ const HomePage = () => {
               </a>
             </form>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section>
+      <section>
+        <div className={styles.sections}>
           <div className={styles.ref}>
             <span>
               {" "}
@@ -116,23 +118,29 @@ const HomePage = () => {
               <div className={styles.__box3}>box 3</div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section>
+      <section>
+        <div className={styles.sections}>
           <div className={styles.services}>
             <div className={styles.__title}>
               <h2>Services</h2>
             </div>
-            <p>{listItems}</p>
+            <div className={styles.list}>
+              <p>{listItems}</p>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section>
+      <section>
+        <div className={styles.sections}>
           <div className={styles.schema}>
             <img src={schema} alt="schema" />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 };
