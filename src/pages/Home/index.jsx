@@ -1,10 +1,10 @@
 import React from "react";
-// import Oyster from "../../components/Oyster";
 // Styles
 import styles from "./styles.module.scss";
 // Images
 import schema from "../../assets/images/schema.png";
 import Navbar from "../../components/Navbar";
+import EmailInput from "../../components/Input";
 
 const HomePage = () => {
   const lists = [
@@ -89,18 +89,15 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section>
+      <section id="form">
         <div className={styles.sections}>
           <div className={styles.form}>
             <div className={styles.left_form}>
-              <p>Let's you stand out</p>
+              <p>Let's make you stand out</p>
             </div>
-            <form>
-              <label for="EMAIL">email</label>
-              <a href="/" class="button">
-                KEEP IN TOUCH
-              </a>
-            </form>
+            <div className={styles.__emailInput}>
+              <EmailInput section="section1" buttonType="icon" />
+            </div>
           </div>
         </div>
       </section>
@@ -140,6 +137,9 @@ const HomePage = () => {
             <img src={schema} alt="schema" />
           </div>
         </div>
+      </section>
+      <section id="kit">
+        <EmailInput section="section2" buttonType="text" />
       </section>
     </>
   );
