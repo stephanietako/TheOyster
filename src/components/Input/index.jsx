@@ -33,15 +33,31 @@ const EmailInput = ({ section, buttonType }) => {
   return (
     <form onSubmit={(e) => addContact(e)}>
       <div className={styles.inputContainer}>
+        <label htmlFor="input_label"> email</label>
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
+          //   id="input_label"
           required
         />
-        <button type="submit" id="btn_arrow">
+        {/* <button type="submit" id="btn_arrow">
           {buttonType !== "icon" ? (
             <img className={styles.arrow} src={arrow} alt="icon arrow" />
+          ) : (
+            <span id="btn_kit">
+              <p>keep in touch</p>
+            </span>
+          )}
+        </button> */}
+        <button type="submit" id="btns">
+          {buttonType !== "icon" ? (
+            <img
+              className={styles.arrow}
+              src={arrow}
+              alt="icon arrow"
+              id="btn_arrow"
+            />
           ) : (
             <span id="btn_kit">
               <p>keep in touch</p>
