@@ -1,27 +1,31 @@
 import React from "react";
-import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/Home";
+
+// Components
 import Oyster from "./components/Oyster";
 
-const App = () => {
-  return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Oyster />
-                <HomePage />
-              </>
-            }
-          />
-        </Routes>
-      </Router>
-    </div>
-  );
-};
+// Pages
+import Home from "./pages/Home";
+
+// Styles
+import "./App.scss";
+
+const App = () => (
+  <div className="App">
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Oyster />
+              <Home />
+            </>
+          }
+        />
+      </Routes>
+    </Router>
+  </div>
+);
 
 export default App;

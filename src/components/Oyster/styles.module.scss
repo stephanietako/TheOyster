@@ -78,4 +78,8 @@
       transform: translate3d(0, -4px, 0);
     }
   }
+
+  @media only screen and (max-width: 1200px) {
+    display: none !important;
+  }
 }

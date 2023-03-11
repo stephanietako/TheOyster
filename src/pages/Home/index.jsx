@@ -1,12 +1,18 @@
-import React from "react";
+// Assets
+import schema from "../../assets/images/schema.png";
+
+// Components
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Hero from "../../components/Hero";
+import SplitSection from "../../components/SplitSection";
+import References from "../../components/References";
+import KeepInTouch from "../../components/KeepInTouch";
+
 // Styles
 import styles from "./styles.module.scss";
-// Images
-import schema from "../../assets/images/schema.png";
-import Navbar from "../../components/Navbar";
-import EmailInput from "../../components/Input";
 
-const HomePage = () => {
+const Home = () => {
   const lists = [
     "art direction",
     "brand positionning ",
@@ -17,132 +23,56 @@ const HomePage = () => {
     "product strategy ",
     "testing & reserch ",
     "UX/UI design",
-    " we love creazy ideas",
+    "we love creazy ideas",
   ];
-  const listItems = lists.map((list) => <li key={list}>{list}</li>);
+
+  const listItems = lists.map((list, index) => (
+    <li key={`${list}-${index}`}>{list}</li>
+  ));
+
+  const refs = ["", "", ""];
+
   return (
-    <>
+    <main>
       <Navbar />
-
-      <section>
-        <div className={styles.sections}>
-          <div className={styles.top}>
-            <div className={styles.__content1_top}>
-              <h1 className={styles.font_italic}>
-                <span className={styles.italic}> Let's build </span>
-                <span className={styles.arimo}>
-                  {" "}
-                  the next <br /> big thing
-                </span>
-                <span className={styles.italic}> together</span>
-              </h1>
-            </div>
-            <div className={styles.__content2}>
-              <p>
-                You bring the vision, we help you turn it into a brand / product
-                people love.
-              </p>
-            </div>
-          </div>
+      <Hero />
+      <SplitSection
+        title={
+          <>
+            we are <br /> creative <br /> minds
+          </>
+        }
+        paragraph={
+          "We craft products and brands that stands out. Together let's make things smarter, newer, and more memorable."
+        }
+        size={"half"}
+      />
+      <SplitSection
+        title={
+          <>
+            driven by <br /> results
+          </>
+        }
+        paragraph={
+          "We believe that function is the substance of aesthetic experience. This principle guides clearer user interfaces, stronger branding devices and more cohesive design systems."
+        }
+        size={"half"}
+      />
+      <KeepInTouch />
+      <References refs={refs} />
+      <SplitSection
+        title={<span className={styles.refs_title}>Services</span>}
+        paragraph={<div className={styles.refs_list_items}>{listItems}</div>}
+        size={"full"}
+      />
+      <section className={styles.schema}>
+        <div className={styles.img_box}>
+          <img src={schema} alt="schema" />
         </div>
       </section>
-
-      <section>
-        <div className={styles.sections}>
-          <div className={styles.mindset1}>
-            <div className={styles.__box1}>
-              <div className={styles.__box_left}>
-                <h2>
-                  we are <br /> creative <br /> minds
-                </h2>
-              </div>
-              <div className={styles.__box_right}>
-                <p>
-                  We craft products and brands that stands out. Together let's
-                  make things smarter, newer, and more memorable.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className={styles.sections}>
-          <div className={styles.mindset2}>
-            <div className={styles.__box2}>
-              <div className={styles.__box_left}>
-                <h2>
-                  driven by <br />
-                  results
-                </h2>
-              </div>
-              <div className={styles.__box_right}>
-                <p>
-                  We believe that function is the substance of aesthetic
-                  experience. This principle guides clearer user interfaces,
-                  stronger branding devices and more cohesive design systems.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="form">
-        <div className={styles.sections}>
-          <div className={styles.form}>
-            <div className={styles.left_form}>
-              <p>Let's make you stand out</p>
-            </div>
-            <div className={styles.__emailInput}>
-              <EmailInput section="section1" buttonType="icon" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className={styles.sections}>
-          <div className={styles.ref}>
-            <span>
-              {" "}
-              <p className={styles.__title}>REF</p>
-            </span>
-            <div className={styles.__box}>
-              <div className={styles.__box1}>box 1</div>
-              <div className={styles.__box2}>box 2</div>
-              <div className={styles.__box3}>box 3</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className={styles.sections}>
-          <div className={styles.services}>
-            <div className={styles.__title}>
-              <h2>Services</h2>
-            </div>
-            <div className={styles.list}>
-              <p>{listItems}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className={styles.sections}>
-          <div className={styles.schema}>
-            <img src={schema} alt="schema" />
-          </div>
-        </div>
-      </section>
-      <section id="kit">
-        <EmailInput section="section2" buttonType="text" />
-      </section>
-    </>
+      <Footer />
+    </main>
   );
 };
 
-export default HomePage;
+export default Home;

@@ -1,5 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+
+// Assets
 import oyster from "../../assets/images/theoyster-transparent.png";
+
+// Styles
 import styles from "./styles.module.scss";
 
 const Oyster = () => {

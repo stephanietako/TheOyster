@@ -11,3 +11,33 @@ html {
   -ms-user-select: none;
   user-select: none;
 }
+
+h2 {
+  font-size: 55px;
+  text-align-last: left;
+  text-transform: uppercase;
+  font-family: "Georama", sans-serif;
+}
+
+p {
+  font-size: 34px;
+  white-space: pre-wrap;
+  list-style: none;
+  font-weight: lighter;
+  line-height: 1.2;
+}
+
+a {
+  color: #fff;
+}
+
+.italic {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.arimo {
+  font-family: "Arimo", sans-serif;
+  font-weight: lighter;
+}

@@ -1,0 +1,156 @@
+footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+
+  .__form {
+    width: 50%;
+    height: 100%;
+    align-items: center;
+
+    h4 {
+      font-size: 34px;
+      font-weight: lighter;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+    .link {
+      margin-top: 47px;
+      a {
+        text-transform: uppercase;
+        font-size: 30px;
+      }
+    }
+
+    .inputContainer {
+      position: relative;
+
+      .__result {
+        position: absolute;
+      }
+
+      input {
+        width: 80%;
+        height: 3.5rem;
+        background-color: #000;
+        color: #fff;
+        border: 0.5px solid #fff;
+        padding-right: 7rem;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+      }
+
+      label {
+        display: block;
+        text-align: left;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-weight: lighter;
+        font-size: 34px;
+      }
+
+      button {
+        justify-self: center;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .arrow {
+          display: flex;
+          position: absolute;
+          right: 20%;
+          top: 48%;
+          margin: 0;
+          padding: 0;
+          width: 84px;
+          height: 41px;
+          filter: brightness(0) invert(1);
+          -webkit-filter: brightness(0) invert(1);
+        }
+
+        span {
+          display: block;
+          text-transform: uppercase;
+          margin: 0;
+          padding: 0;
+          font-size: 1.2rem;
+          font-weight: bold;
+          left: 44px;
+          border: 1px solid #fff;
+          margin-top: 25px;
+          padding: 17px;
+        }
+      }
+    }
+  }
+
+  .__network {
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    text-transform: uppercase;
+    padding-left: 10rem;
+    font-size: 30px;
+
+    .__title {
+      margin-bottom: 20px;
+    }
+
+    span {
+      margin: 0 10px;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    height: inherit;
+    display: block;
+    padding-top: 20%;
+
+    .__network,
+    .__form {
+      width: 100%;
+      padding-left: 0;
+      font-size: 24px;
+
+      h4 {
+        font-size: 30px;
+      }
+
+      .link {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        a {
+          text-transform: uppercase;
+          font-size: 24px;
+        }
+      }
+
+      .inputContainer {
+        input {
+          width: 95%;
+          height: 3rem;
+        }
+
+        label {
+          font-size: 24px;
+        }
+
+        button {
+          .arrow {
+            right: 2%;
+          }
+        }
+      }
+
+      .__title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
