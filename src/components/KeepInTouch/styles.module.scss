@@ -87,15 +87,22 @@
       .__left {
         width: 100%;
         padding: 10px;
-        text-align: center;
+        text-align: left;
 
         h3 {
-          font-size: 60px;
+          font-size: 35px;
         }
       }
       .right_form {
         width: 100%;
         padding: 10px;
+        label {
+          font-size: 26px !important;
+        }
+        input[type="submit"] {
+          font-size: 26px !important;
+          margin-left: 31px;
+        }
       }
     }
   }

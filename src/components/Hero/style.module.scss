@@ -29,10 +29,12 @@
       }
     }
 
-    .__content2 p {
+    .__content2 {
       width: 500px;
-      color: #fff;
-      text-align: center;
+      p {
+        color: #fff;
+        text-align: center;
+      }
     }
   }
 
@@ -40,16 +42,20 @@
     height: inherit;
 
     .__content1_top {
-      text-align: center;
-      padding: 10px !important;
-      margin-bottom: 80px !important;
+      text-align: left;
+      padding: 97px !important;
+      margin: 0 !important;
+
       h1 {
         font-size: 55px !important;
       }
     }
 
     .__content2 {
-      display: none;
+      width: 50% !important;
+    }
+    p {
+      font-size: 24px;
     }
   }
 }
